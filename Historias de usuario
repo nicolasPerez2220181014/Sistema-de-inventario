@@ -1,0 +1,47 @@
+- Gestor de contenidos
+- administrador de cuentas
+- Gestor de productos
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+Administrador de cuentas
+
+1) Como administrador de cuentas quiero agregar una nueva cuenta, ya sea para un gestor de contenido o para un cliente.
+2) Como administrador de cuentas quiero eliminar una cuenta.
+3) Como administrador de cuentas quiero actualizar una cuenta con un nuevo rol y los datos del usuario.
+4) Como administrador de cuentas quiero obtener la informacion de una cuenta.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Gestor de contenidos
+
+5)  como gestor de contenidos quiero actualizar la foto de un producto. 
+6)  como gestor de contenidos quiero publicar productos.
+7)  como gestor de contenidos quiero modificar el estado de publicacion del producto para que mi catalogo se actualice .
+8)  como gestor de contenidos quiero agregar la foto a un producto.
+9)  como gestor de contenidos quiero agregar una descripcion al producto.
+10) como gestor de contenidos quiero actualizar una descripcion al producto.
+11) como gestor de contenidos quiero agregar una categoria.
+12) como gestor de contenidos quiero relacionar un producto con una categoria.
+13) como gestor de contenidos quiero hacer cambios en la interfaz grafica de la tienda.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Gestor de productos
+
+14) como gestor de productos quiero agregar un producto nuevo.
+15) como gestor de produtos quiero cambiar el estado de un producto. (suspendido, pedido (no ha llegado a la tienda), agotado, disponible)
+16) como gestor de productos quiero asignar un envio a un producto.
+17) como gestor de productos quiero modicar un producto. 
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Cliente
+
+18) como cliente quiero crear una cuenta con mi informacion personal.
+19) como cliente quiero cancelar mis compras.
+20) como cliente quiero cancelar cuneta.
+23) como cliente quiero añadir productos a mi carrio (listado de Compras).
+24) como cliente quiero conocer la informacion de mi cuenta.
+25) como cliente quiero actualizar la informacion de mi cuenta (direccion, celular, nombre completo).
