@@ -1,0 +1,37 @@
+// Usuario
+
+- ID de usuario
+- Contraseña
+- nombre
+- apellido
+- direccion
+- ciudad
+- departamento
+- pais
+- Historial
+- Identificacion (Legal)
+- estado
+- rol
+- fecha creacion
+- fecha nacimiento
+
+
+// Producto
+
+- Categoria
+- referencia
+- nombre
+- identificacion
+- fabricante
+- Fecha compra
+- fecha venta
+- precio compra
+- precio venta minorista
+- precio venta mayorista
+- descuento
+- unidades en stock
+- estado
+
+// Factura
+
+- 
