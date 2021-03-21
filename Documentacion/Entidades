@@ -2,36 +2,55 @@
 
 - ID de usuario
 - Contraseña
-- nombre
+- nombre_de_usuario
+- nombre (cliente)
 - apellido
-- direccion
-- ciudad
-- departamento
-- pais
-- Historial
-- Identificacion (Legal)
+- Celular
+- correo
+- Historial compras - productosVistos
+- tipoIdentificacion (Legal)
 - estado
 - rol
 - fecha creacion
 - fecha nacimiento
 
+// direccion
+- id de direccion
+- direccion (En la base de datos ser un entidad aparte, puesto que varios usuarios pueden tener mas de una direccion)
+- ciudad
+- codigo_postal
+- departamento
+- pais
 
 // Producto
 
 - Categoria
 - referencia
 - nombre
+- descripcion
 - identificacion
 - fabricante
 - Fecha compra
 - fecha venta
 - precio compra
+- unidades en stock
+- estado
+- descripcion
+- imagen
+
+// Ventas
+
 - precio venta minorista
 - precio venta mayorista
 - descuento
-- unidades en stock
-- estado
 
+//Medios de pago
+- id tipo de pago
+- tipo_pago (Efectivo - transferencia)
+- descripcion
 // Factura
-
-- 
+- id factura
+- fecha de compra
+- precio
+- descuento
+ 
