@@ -1,0 +1,122 @@
+--Tabla categoría
+
+create table categoria(
+       idcategoria integer primary key identity,
+       nombre varchar(50) not null unique,
+       descripcion text null
+);
+
+
+--Tabla Producto
+
+create table producto(
+       idProducto integer primary key identity,
+       idcategoria integer not null,
+       codigo varchar(50) null,
+       nombre varchar(100) not null unique,
+       fabricante varchar(50) not null unique,
+       fecha_compra datetime not null,
+       precio_venta decimal(11,2) not null,
+       stock integer not null,
+       descripcion text not null,
+       estado char(50) null,
+       FOREIGN KEY (idcategoria) REFERENCES categoria(idcategoria)
+);
+
+
+--Tabla rol
+
+create table rol(
+       idrol integer primary key identity,
+       nombre varchar(30) not null,
+       descripcion varchar(100) null
+);
+
+--Tabla usuario
+
+create table usuario(
+       idusuario integer primary key identity,
+       idrol integer not null,
+       idubicacion integer not null,
+       nombre varchar(100) not null,
+       apellido varchar(100) not null,
+       nombre_usuario varchar(100) not null,
+       clave varchar(100) not null,
+       tipo_documento varchar(50) null,
+       num_documento varchar(20) null,
+       telefono varchar(20) null,
+       email varchar(50) not null,
+       fecha_nacimiento date not null,
+       fecha_creacion datetime not null,
+       estado char(50) not null,
+       FOREIGN KEY (idrol) REFERENCES rol (idrol),
+       FOREIGN KEY (idubicacion) REFERENCES ubicacion (idubicacion)
+
+);
+
+--Tabla ubicacion
+
+create table ubicacion(
+       idubicacion integer primary key identity,
+       direccion varchar(70) not null,
+       ciudad varchar(70) not null,
+       departamento varchar(70) not null,
+       pais varchar(80) not null,
+       codigo_postal varchar(80) not null
+
+);
+
+
+--Tabla ingreso
+
+create table ingreso(
+       idingreso integer primary key identity,
+       idusuario integer not null,
+       tipo_comprobante varchar(20) not null,
+       serie_comprobante varchar(7) null,
+       num_comprobante varchar (10) not null,
+       fecha datetime not null,
+       total decimal (11,2) not null,
+       estado varchar(20) not null,
+       FOREIGN KEY (idusuario) REFERENCES usuario (idusuario)
+);
+
+--Tabla detalle_ingreso
+
+create table detalle_ingreso(
+       iddetalle_ingreso integer primary key identity,
+       idingreso integer not null,
+       idproducto integer not null,
+       cantidad integer not null,
+       precio decimal(11,2) not null,
+       FOREIGN KEY (idingreso) REFERENCES ingreso (idingreso) ON DELETE CASCADE,
+       FOREIGN KEY (idproducto) REFERENCES producto (idproducto)
+);
+
+
+--Tabla venta
+
+create table venta(
+       idventa integer primary key identity,
+       idusuario integer not null,
+       tipo_comprobante varchar(20) not null,
+       serie_comprobante varchar(7) null,
+       num_comprobante varchar (10) not null,
+       fecha_hora datetime not null,
+       total decimal (11,2) not null,
+       FOREIGN KEY (idusuario) REFERENCES usuario (idusuario)
+);
+
+--Tabla detalle_venta
+
+create table detalle_venta(
+       iddetalle_venta integer primary key identity,
+       idventa integer not null,
+       idproducto integer not null,
+       tipo_venta varchar(50) not null,
+       cantidad integer not null,
+       precio decimal(11,2) not null,
+       descuento decimal(11,2) not null,
+       FOREIGN KEY (idventa) REFERENCES venta (idventa) ON DELETE CASCADE,
+       FOREIGN KEY (idproducto) REFERENCES producto (idproducto)
+);
