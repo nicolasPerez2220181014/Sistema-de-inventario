@@ -1,0 +1,27 @@
+import java.util.Date;
+
+public class ProductoParaVender extends Producto {
+    private Float cantidad;
+
+    public ProductoParaVender(String nombre, String codigo, String fabricante, String descripcion, Date fecha_compra, Float precio, Float existencia, Integer id, Float cantidad) {
+        super(nombre, codigo, fabricante, descripcion, fecha_compra, precio, existencia, id);
+        this.cantidad = cantidad;
+    }
+
+    public ProductoParaVender(String nombre, String codigo, String fabricante, String descripcion, Date fecha_compra,Float precio, Float existencia, Float cantidad) {
+        super(nombre, codigo, fabricante, descripcion, fecha_compra, precio, existencia);
+        this.cantidad = cantidad;
+    }
+
+    public void aumentarCantidad() {
+        this.cantidad++;
+    }
+
+    public Float getCantidad() {
+        return cantidad;
+    }
+
+    public Float getTotal() {
+        return this.getPrecio() * this.cantidad;
+    }
+}
