@@ -13,7 +13,6 @@ Administrador de cuentas
 4) Como administrador de cuentas quiero obtener la informacion de una cuenta.
 
 
---- Nicolas perez (Trabajando en ello)
 -----------------------------------------------------------------------------------------------------------------------
 
 Gestor de contenidos
@@ -36,6 +35,8 @@ Gestor de productos
 15) como gestor de produtos quiero cambiar el estado de un producto. (suspendido, pedido (no ha llegado a la tienda), agotado, disponible)
 16) como gestor de productos quiero asignar un envio a un producto.
 17) como gestor de productos quiero modicar un producto. 
+
+--- Nicolas perez (Trabajando en ello)
 
 --------------------------------------------------------------------------------------------------------------------------
 
