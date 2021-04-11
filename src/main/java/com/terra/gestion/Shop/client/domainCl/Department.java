@@ -13,6 +13,7 @@ import javax.persistence.Id;
 @Builder
 public class Department {
 
+
     @Id
     private Integer departmentId;
     private String departmentName;
