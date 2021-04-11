@@ -24,6 +24,8 @@ public class Person {
     private Date personCreationDate;
     private Integer personIdentification;
 
+    //Dejo Getters and Setters, por si las dudas, aunque esta decorado con Lombok
+    //Cuando se resuelva duda se pueden dejar o eliminar
     public Integer getPersonId() {
         return personId;
     }
