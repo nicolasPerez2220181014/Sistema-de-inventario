@@ -1,4 +1,4 @@
-CREATE TABLE Persons (person_id  SERIAL NOT NULL, person_name varchar(50), person_lastname varchar(50), person_email varchar(80) UNIQUE, person_cellphone int4 NOT NULL UNIQUE, person_birthdate date, person_creation_date date, person_identification varchar(50) UNIQUE, Fk_Locations_id int4 NOT NULL, Fk_Users_nick_name varchar(30), Fk_Roles_id int4 DEFAULT 1, "Fk_Names_identification _id" int4, PRIMARY KEY (person_id));
+CREATE TABLE Persons (person_id  SERIAL NOT NULL, person_name varchar(50), person_lastname varchar(50), person_email varchar(80) UNIQUE, person_cellphone varchar(30) NOT NULL UNIQUE, person_birthdate date, person_creation_date date, person_identification varchar(50) UNIQUE, Fk_Locations_id int4 NOT NULL, Fk_Users_nick_name varchar(30), Fk_Roles_id int4 DEFAULT 1, "Fk_Names_identification _id" int4, PRIMARY KEY (person_id));
 CREATE TABLE Roles (roles_id  SERIAL NOT NULL, roles_name varchar(20), PRIMARY KEY (roles_id));
 CREATE TABLE Users (user_nick_name varchar(30) NOT NULL, user_password varchar(255), Fk_State_id int4, PRIMARY KEY (user_nick_name));
 CREATE TABLE States (state_id  SERIAL NOT NULL, state_name varchar(30), PRIMARY KEY (state_id));
